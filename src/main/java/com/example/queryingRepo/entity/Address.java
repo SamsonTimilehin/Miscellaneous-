@@ -13,5 +13,6 @@ public class Address {
     private Long id;
     private String zip;
     private String name;
+    private String contact;
 
 }
