@@ -1,8 +1,11 @@
 package com.example.queryingRepo.entity;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 public class Email {
 
     @Id
