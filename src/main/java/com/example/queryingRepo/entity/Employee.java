@@ -23,4 +23,6 @@ public class Employee {
     private String email;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
     private List<Email> emails;
+
+    private double amount;
 }

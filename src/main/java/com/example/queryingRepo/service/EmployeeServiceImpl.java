@@ -64,10 +64,16 @@ public class EmployeeServiceImpl implements EmployeeService{
         return "It is before five seconds ago";
     }
 
+    @Override
+    public Employee getAmount() {
+        return employeeRepo.getAmount();
+    }
+
     public LocalDateTime convertToLocalDateTime(Date dateToConvert) {
         return dateToConvert.toInstant()
                 .atZone(ZoneId.systemDefault())
                 .toLocalDateTime();
+
     }
 
 }

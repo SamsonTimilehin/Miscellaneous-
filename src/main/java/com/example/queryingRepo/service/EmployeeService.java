@@ -15,4 +15,6 @@ public interface EmployeeService {
     String findDateValue(Long id);
 
     String listValue(List<Employee> employees,Integer id);
+
+    Employee getAmount();
 }

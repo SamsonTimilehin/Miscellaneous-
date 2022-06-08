@@ -43,4 +43,9 @@ public class EmployeeController {
         return employeeService.findByName(name);
     }
 
+    @GetMapping("/amount")
+    public Employee getAmount(){
+        return employeeService.getAmount();
+    }
+
 }

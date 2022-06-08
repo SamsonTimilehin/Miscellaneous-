@@ -15,4 +15,6 @@ public interface EmployeeRepo extends JpaRepository<Employee,Long> {
     @Query(nativeQuery = true, value = "select * from employee where name = ?1")
     Employee findNameUsingQuerying(String name);
 
+    @Query(nativeQuery = true, value = "select amount from employee t where t.amount = 2000")
+    Employee getAmount();
 }
