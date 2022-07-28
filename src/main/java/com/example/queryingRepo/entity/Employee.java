@@ -1,6 +1,5 @@
 package com.example.queryingRepo.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -20,6 +19,7 @@ public class Employee {
     private Date createdAt;
     private String role;
     @Column(unique = true)
+
     private String email;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "employee")
     private List<Email> emails;

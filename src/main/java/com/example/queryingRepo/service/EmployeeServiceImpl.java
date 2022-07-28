@@ -5,6 +5,7 @@ import com.example.queryingRepo.repository.EmployeeRepo;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -74,6 +75,10 @@ public class EmployeeServiceImpl implements EmployeeService{
                 .atZone(ZoneId.systemDefault())
                 .toLocalDateTime();
 
+    }
+    @Transactional
+    public void testTransactional(){
+        Employee tranEmployee = getAmount();
     }
 
 }
